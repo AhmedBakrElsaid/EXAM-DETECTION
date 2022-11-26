@@ -20,7 +20,7 @@ class Account(models.Model) :
 
 class ClassRoom (models.Model):
     
-    teacher_id = models.ManyToManyField(Account, related_name='teacher_id', on_delete = models.SET_NULL,blank=True,null=True)
+    teacher_id = models.ManyToManyField(Account, related_name='teacher_id')
 
 
 
@@ -31,10 +31,16 @@ class Exam (models.Model):
 
 
 class StudentAnswer (models.Model):
-    pass
+    student_answer = models.ForeignKey('Question',related_name='student_answer',on_delete=models.SET_NULL,null=True,blank=True)
+    answer = models.TextField()
+    std_answer = models.ForeignKey(Account,related_name='std_answer',on_delete=models.CASCADE)
+    
 
 
 
 
 class Question (models.Model):
-    question = models.ForeignKey(Exam,related_name='question',on_delete=models.CASCADE)
+    questions = models.TextField()
+    question_re = models.ForeignKey(Exam,related_name='question',on_delete=models.CASCADE)
+    model_answer = models.TextField()
+    
