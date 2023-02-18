@@ -15,6 +15,8 @@ class Account(models.Model) :
     def __str__(self) -> str:
         return self.user.username
 
+
+
 class ClassRoom(models.Model):
     # add validator it is a teacher who created the classroom
     teacher_id = models.OneToOneField(Account, related_name='teacher_id', on_delete=models.CASCADE)
@@ -22,6 +24,8 @@ class ClassRoom(models.Model):
 
     def __str__(self) -> str:
         return self.name
+
+
 
 
 class Exam(models.Model):
@@ -33,6 +37,8 @@ class Exam(models.Model):
         return self.name
 
 
+
+
 class Question(models.Model):
     exam = models.ForeignKey(Exam, related_name='questions', on_delete=models.CASCADE)
     question = models.TextField()
@@ -40,6 +46,9 @@ class Question(models.Model):
 
     def __str__(self) -> str:
         return self.question
+
+
+
 
 
 class StudentAnswer(models.Model):
