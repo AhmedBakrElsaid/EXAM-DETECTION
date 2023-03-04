@@ -10,7 +10,7 @@ class AnswerListApi(generics.ListCreateAPIView):
 
 class AnswerDetailApi(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = StudentAnswerSerializer
-    queryset = StudentAnswer.objects.all() #wrong fix it
+    queryset = StudentAnswer.objects.all() 
 
 
 class QuestionListApi(generics.ListCreateAPIView):
@@ -22,7 +22,7 @@ class QuestionListApi(generics.ListCreateAPIView):
 class QuestionDetailApi(generics.RetrieveUpdateDestroyAPIView):
     
     serializer_class = QuestionSerializer
-    queryset = Question.objects.all() # wrong fix it
+    queryset = Question.objects.all() 
 
 
 class ExamListApi(generics.ListCreateAPIView):
@@ -34,7 +34,7 @@ class ExamListApi(generics.ListCreateAPIView):
 class ExamDetailApi(generics.RetrieveUpdateDestroyAPIView):
     
     serializer_class = ExamSerializer
-    queryset = Exam.objects.all() # wrong fix it
+    queryset = Exam.objects.all() 
 
 
 class ClassRoomListApi (generics.ListCreateAPIView):
@@ -46,7 +46,7 @@ class ClassRoomListApi (generics.ListCreateAPIView):
 class ClassRoomDetailApi (generics.RetrieveUpdateDestroyAPIView):
     
     serializer_class = ClassRoomSerializer
-    queryset = ClassRoom.objects.all()# wrong fix it
+    queryset = ClassRoom.objects.all()
 
 
 class AccountListApi (generics.ListCreateAPIView):
@@ -58,4 +58,4 @@ class AccountListApi (generics.ListCreateAPIView):
 class AccountDetailApi (generics.RetrieveUpdateDestroyAPIView):
     
     serializer_class = AccountSerializer
-    queryset = Account.objects.all()# wrong fix it
+    queryset = Account.objects.all()
