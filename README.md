@@ -34,34 +34,41 @@
 <hr>
 
 # API Endpoints:
-1. api/answers/all
-    - return all student answers
-2. api/answer/int:pk/
-    - return student answer with given id
+1. api/answers/all [GET][POST]
+    - [GET] return all student answers
+    - [POST] send student answers to database 
+2. api/answer/int:pk/ [GET][PUT][DELETE]
+    - [GET] return student answer with given id
+    - [PUT] update student answer with given id
+    - [DELETE] delete student answer given an id
 3. [TODO: add endpoint to return answers given exam id]
 4. [TODO: add endpoint to return answers given student id]
-5. api/question/all
-    - return all questions
-6. api/question/int:pk/
-    - return question with given id
+5. api/question/all [GET][POST]
+    - [GET] return all questions 
+    - [POST] send questions to database 
+6. api/question/int:pk/ [GET][PUT][DELETE]
+    - [GET] return question with given id
+    - [PUT] update question with given id
+    - [DELETE] delete question given an id
 7. [TODO: add endpoint to return questions given exam id]
-8. api/exam/all
-    - return all exams
-9. api/exam/int:pk/
-    - return exam with given id
+8. api/exam/all [GET][POST]
+    - [GET] return all exams
+    - [POST] send exam to database 
+9. api/exam/int:pk/ [GET][PUT][DELETE]
+    - [GET] return exam with given id
+    - [PUT] update exam with given id
+    - [DELETE] delete exam with given id
 10. [TODO: add endpoint to return exams given classroom id]
 11. [TODO: add endpoint to return exams given student id]
-12. api/clasroom/all
-    - return all classrooms
-13. api/clasroom/int:pk/
-    - return classroom with given id
+12. api/clasroom/all [GET][POST]
+    - [GET] return all classrooms
+    - [POST] send classroom to database 
+13. api/clasroom/int:pk/ [GET][PUT][DELETE]
+    - [GET] return classroom with given id
+    - [PUT]update classroom with given id
+    - [DELETE] delete classroom with given id 
 14. [TODO: add endpoint to return classrooms given student id]
 15. [TODO: add endpoint to return classrooms given teacher id]
 16. [TODO: add endpoint for authentication]
-17. [TODO: add endpoint for creating exams]
-18. [TODO: add endpoint for creating questions]
-19. [TODO: add endpoint for creating classrooms]
-20. [TODO: add endpoint for sending student answers]
-21. [TODO: all the above but for editing and deleting]
 21. [TODO: add endpoint for grading using ai model]
 
